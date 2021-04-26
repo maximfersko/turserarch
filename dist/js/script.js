@@ -1,5 +1,5 @@
 
-const btn = document.querySelectorAll('.button_subheader')
+const btn = document.querySelectorAll('button')
 
 btn.addEventListener('click', () => {
     alert('test')
