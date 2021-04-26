@@ -1,0 +1,40 @@
+.subheader {
+    height: 83px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &_label {
+        display: flex;
+
+        &_img {
+            margin-right: 12px;
+        }
+
+        &_text {
+
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 128%;
+            color: #0C447C;
+        }
+    }
+
+    &_inf {
+        display: flex;
+        align-items: center;
+        margin-right: 200px;
+
+        &_text {
+            margin-left: 58px;
+            color: #292C2E;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
