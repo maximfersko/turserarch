@@ -1,7 +1,15 @@
 
-const btn = document.querySelectorAll('.button_subheader')
+const btn = document.querySelector('.button_subheader')
 
 btn.addEventListener('click', () => {
-    alert('test')
+    prompt('lf blb ns d ;jge ,kbbby')
 })
+
+const obj = {
+    man:'john',
+    kok:89
+}
+
+
+
 

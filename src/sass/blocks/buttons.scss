@@ -1,5 +1,9 @@
 .button {
-    outline:0 none !important;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-left: 25px;
+    outline: 0 none !important;
     width: 184px;
     height: 40px;
     border-radius: 20px;
@@ -8,15 +12,9 @@
     line-height: 17px;
     background-color: #25A95E;
     color: #fff;
-    
-
-    &_subheader {
-        display: flex;
-        align-items: center;
-        text-align: center;
-        
+    &:hover {
+        background-color: #2D9359;
     }
-
 
 
 }

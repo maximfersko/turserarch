@@ -1,8 +1,10 @@
 .subheader {
     height: 83px;
+    max-width: 1300px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-left: 280px;
 
     &_label {
         display: flex;
@@ -23,7 +25,8 @@
     &_inf {
         display: flex;
         align-items: center;
-        margin-right: 200px;
+        margin-right: 130px;
+       
 
         &_text {
             margin-left: 58px;
@@ -35,6 +38,25 @@
             a {
                 text-decoration: none;
             }
+        }
+
+        &_RU {
+            
+            &-text {
+               
+                font-size: 12px;
+                line-height: 15px;
+                color: #292C2E;
+            }
+            &_blockOne {
+                display: flex;
+                align-items: center;
+            }
+            &_secondBlock {
+                display: flex;
+                align-items: center;
+            }
+            
         }
     }
 }
