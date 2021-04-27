@@ -4,7 +4,8 @@
     background-color: #F9FAFF;
 
     &_wrapper {
-        
+        max-width: 990px;
+        padding: 7px 0 0 550px;
         display: flex;
         justify-content: space-between;
         align-items: center;
