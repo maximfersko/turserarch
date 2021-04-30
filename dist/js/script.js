@@ -5,27 +5,84 @@ btn.addEventListener('click', () => {
 })
 
 const old = +prompt('Сколько вам лет ?')
+const randomNum = +prompt('Рандомное число ')
 
 const obj = {
-    dataBase:old
+    dataBase: old,
+    DB: randomNum
 }
 
 function check() {
-    if(obj.dataBase === 18) {
+    if (obj.dataBase === 18) {
         console.log('вам есть 18!')
-    }else if (obj.dataBase > 18) {
+    } else if (obj.dataBase > 18) {
         console.log('вам больше 18')
-    }else if (obj.dataBase < 18) {
+    } else if (obj.dataBase < 18) {
         console.log('вам меньше 18!')
     }
 }
 
 check()
 
-for(let i = 1; i <= 6; i++ ) {
+for (let i = 1; i <= 6; i++) {
     console.log(i)
 }
 
+function wow() {
+    if (obj.DB < 1) {
+        console.log('вам ' + `${obj.DB}`)
+    } else if (obj.DB === 1) {
+        console.log('вам ' + `${obj.DB}`)
+    } else if (obj.DB > 1) {
+        console.log('вам ' + `${obj.DB}`)
+    }
+}
+
+wow()
 
 
 
+function validateForms(form){
+    $(form).validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2
+            },
+            phone: "required",
+            email: {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            name: {
+                required: "Пожалуйста, введите свое имя",
+                minlength: jQuery.validator.format("Введите {0} символа!")
+              },
+            phone: "Пожалуйста, введите свой номер телефона",
+            email: {
+              required: "Пожалуйста, введите свою почту",
+              email: "Неправильно введен адрес почты"
+            }
+        }
+    });
+};
+
+
+$('form').submit(function(e) {
+    e.preventDefault();
+
+    $.ajax({
+        type: "POST",
+        url: "mailer/smart.php",
+        data: $(this).serialize()
+    }).done(function() {
+        $(this).find("input").val("");
+        $('#consultation, #order').fadeOut();
+        $('.overlay, #thanks').fadeIn('slow');
+
+        $('form').trigger('reset');
+    });
+    return false;
+});
